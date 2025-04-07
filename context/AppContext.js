@@ -5,7 +5,7 @@ import { user_details_initial_state,user_details_reducer } from '../userReducer/
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-const [user, setUser] = useState('abc');
+const [user, setUser] = useState('Nishant Thapa from COntext');
 const [state, dispatch] = useReducer(user_details_reducer, user_details_initial_state)
 
   return (
