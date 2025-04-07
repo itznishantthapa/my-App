@@ -16,7 +16,7 @@ const About = ({navigation}) => {
     <View style={styles.container}>
       <Text style={{color:'#ffffff'}}>About</Text>
       <Text style={{color:'#ffffff'}}>{user}</Text>
-      <TouchableOpacity style={styles.button} onPress={updateContextData}>
+      <TouchableOpacity style={styles.button} onPress={handleNavigation}>
         <Text>Update</Text>
       </TouchableOpacity>
     </View>
