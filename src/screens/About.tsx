@@ -2,7 +2,10 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useContext } from 'react'
 import { AppContext, AppProvider } from '../../context/AppContext'
 
-const About = ({navigation}) => {
+const About = ({navigation, route}) => {
+
+    const {sentData}=route.params;
+
     const {user,setUser} = useContext(AppContext);
 
     const handleNavigation=()=>{
@@ -15,9 +18,10 @@ const About = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={{color:'#ffffff'}}>About</Text>
+      <Text style={{color:'#ffffff'}}>This is the data comming from the Home: {sentData.name}</Text>
       <Text style={{color:'#ffffff'}}>{user}</Text>
-      <TouchableOpacity style={styles.button} onPress={updateContextData}>
-        <Text>Update</Text>
+      <TouchableOpacity style={styles.button} onPress={handleNavigation}>
+        <Text>Go to profile</Text>
       </TouchableOpacity>
     </View>
   )
